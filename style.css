@@ -3898,6 +3898,9 @@ figcaption {
 .legal-component {
   max-width: 80ch;
 }
+.div-block {
+  display: none;
+}
 @media screen and (max-width: 991px) {
   h3 {
     font-size: 2.5rem;
