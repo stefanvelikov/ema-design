@@ -2327,6 +2327,8 @@ figcaption {
   box-shadow: 0 0 0.25rem 0 #3898ec;
 }
 .container-large {
+  position: relative;
+  z-index: 5;
   width: 100%;
   max-width: 85rem;
   margin-right: auto;
@@ -3618,9 +3620,10 @@ figcaption {
   white-space: nowrap;
 }
 .cta_image {
-  width: 20rem;
-  height: 20rem;
-  max-height: 20rem;
+  height: 22.5rem;
+  max-height: 25rem;
+  max-width: 25rem;
+  min-width: 22.5rem;
 }
 .about_image {
   width: 100%;
@@ -3901,6 +3904,14 @@ figcaption {
 .div-block {
   display: none;
 }
+.cta_image-inner {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 0%;
+  object-position: 50% 0%;
+}
 @media screen and (max-width: 991px) {
   h3 {
     font-size: 2.5rem;
@@ -4126,6 +4137,7 @@ figcaption {
   }
   .cta_images-wrap {
     overflow: scroll;
+    margin-right: 0;
     margin-left: 0;
   }
   .about_image {
@@ -4731,12 +4743,15 @@ figcaption {
     grid-column-gap: 1.5rem;
   }
   .cta_image {
-    max-width: 90vw;
+    height: 80vw;
+    max-height: none;
+    max-width: 80vw;
+    min-width: 80vw;
     -o-object-fit: cover;
     object-fit: cover;
   }
   .about_image {
-    max-height: 60vh;
+    max-height: 55vh;
   }
   .work_filter {
     margin-top: 0;

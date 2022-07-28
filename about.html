@@ -149,9 +149,106 @@
           .work_filter-text {
             max-width: fit-content;
           }
+
+          /*Noise animation*/
+
+          @-webkit-keyframes noise {
+            0% {
+              transform: translate3d(0, 9rem, 0);
+            }
+            10% {
+              transform: translate3d(-1rem, -4rem, 0);
+            }
+            20% {
+              transform: translate3d(-8rem, 2rem, 0);
+            }
+            30% {
+              transform: translate3d(9rem, -9rem, 0);
+            }
+            40% {
+              transform: translate3d(-2rem, 7rem, 0);
+            }
+            50% {
+              transform: translate3d(-9rem, -4rem, 0);
+            }
+            60% {
+              transform: translate3d(2rem, 6rem, 0);
+            }
+            70% {
+              transform: translate3d(7rem, -8rem, 0);
+            }
+            80% {
+              transform: translate3d(-9rem, 1rem, 0);
+            }
+            90% {
+              transform: translate3d(6rem, -5rem, 0);
+            }
+            to {
+              transform: translate3d(-7rem, 0, 0);
+            }
+          }
+          @keyframes noise {
+            0% {
+              transform: translate3d(0, 9rem, 0);
+            }
+            10% {
+              transform: translate3d(-1rem, -4rem, 0);
+            }
+            20% {
+              transform: translate3d(-8rem, 2rem, 0);
+            }
+            30% {
+              transform: translate3d(9rem, -9rem, 0);
+            }
+            40% {
+              transform: translate3d(-2rem, 7rem, 0);
+            }
+            50% {
+              transform: translate3d(-9rem, -4rem, 0);
+            }
+            60% {
+              transform: translate3d(2rem, 6rem, 0);
+            }
+            70% {
+              transform: translate3d(7rem, -8rem, 0);
+            }
+            80% {
+              transform: translate3d(-9rem, 1rem, 0);
+            }
+            90% {
+              transform: translate3d(6rem, -5rem, 0);
+            }
+            to {
+              transform: translate3d(-7rem, 0, 0);
+            }
+          }
+
+          .noise {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            z-index: 1;
+          }
+
+          .noise:after {
+            content: "";
+            width: calc(100% + 20rem);
+            height: calc(100% + 20rem);
+            background-image: url("https://assets.website-files.com/61dc181f411e10afa114fdee/61e124f6ba480e25288afb06_noise.png");
+            background-position: 50%;
+            position: absolute;
+            left: -10rem;
+            top: -10rem;
+            will-change: transform;
+            -webkit-animation: noise 1s steps(2) infinite;
+            animation: noise 1s steps(2) infinite;
+          }
         </style>
       </div>
-      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav_component is-active w-nav">
+      <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav_component w-nav">
         <div class="page-padding">
           <div class="container-large is-nav">
             <a href="/" class="nav_link-wrap w-nav-brand"><p class="nav_logo">EG</p></a>
@@ -177,6 +274,8 @@
         <div class="bg-first"></div>
         <div class="bg-grid"></div>
         <div class="bg-noise"></div>
+        <div class="noise"></div>
+        <div class="noise"></div>
       </div>
       <main class="main-wrapper">
         <section class="about_section">
@@ -223,100 +322,122 @@
         <div class="section-cta">
           <div class="padding-vertical padding-sections is-home-cta">
             <div class="cta_component">
-              <h2 class="cta_heading">Don&#x27;t miss out on anything<br /><span class="cta_heading-accent">Follow me</span></h2>
+              <h2 class="cta_heading">
+                Don&#x27;t miss out on anything<br /><a href="https://www.instagram.com/_nemo.emo_/" target="_blank"><span class="cta_heading-accent">Follow me</span></a>
+              </h2>
             </div>
             <div data-w-id="1a5e54a3-a013-7c7a-0c5b-fe6140c64485" class="cta_images-wrap">
-              <img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp       572w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp       602w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp       572w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp       572w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203.webp       602w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204.webp       572w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205.webp       602w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206.webp       602w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              /><img
-                src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp"
-                loading="lazy"
-                srcset="
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207-p-500.webp 500w,
-                  https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp       602w
-                "
-                sizes="(max-width: 479px) 19vw, (max-width: 767px) 14vw, (max-width: 991px) 13vw, 17vw"
-                alt=""
-                class="cta_image"
-              />
+              <a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp       572w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp       602w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp       572w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619dc69f93f7d5789a7_Artwork%202.webp       572w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361ae724d7c56b61edbf_Artwork%203.webp       602w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3619029d02597d590bbb_Artwork%204.webp       572w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a1ae34583a884de42_Artwork%205.webp       602w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de3592132cbe133f3367a1_Artwork%206.webp       602w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de35915b941847c3ad458e_Artwork%207.webp       602w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner" /></a
+              ><a href="https://www.instagram.com/_nemo.emo_/" target="_blank" class="cta_image w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp"
+                  loading="lazy"
+                  srcset="
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/62b1f56778118f6941acc340/62de361a63a8786fcdacced4_Artwork%201.webp       572w
+                  "
+                  sizes="(max-width: 479px) 80vw, (max-width: 767px) 64vw, (max-width: 991px) 42vw, 33vw"
+                  alt=""
+                  class="cta_image-inner"
+              /></a>
             </div>
           </div>
         </div>
