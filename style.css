@@ -3749,7 +3749,14 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
 }
-.case-hero_content-left,
+.case-hero_content-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
 .case-hero_content-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
