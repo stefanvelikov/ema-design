@@ -4384,9 +4384,6 @@ figcaption {
   .nav_link {
     padding-left: 1.25rem;
   }
-  .nav_social {
-    display: none;
-  }
   .section-home-hero {
     min-height: auto;
     padding-top: 16vw;
@@ -4597,6 +4594,9 @@ figcaption {
   }
   .fs-cc-banner_text {
     margin-right: 0;
+  }
+  .nav_social {
+    display: none;
   }
   .section-home-hero {
     -webkit-box-pack: justify;
