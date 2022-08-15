@@ -3888,10 +3888,7 @@ figcaption {
   font-size: 7rem;
 }
 .legal_buttons-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-top: 1rem;
   grid-column-gap: 2rem;
 }
